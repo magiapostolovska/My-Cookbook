@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF7F0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/rounded_background"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:padding="14dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="#333"
+            android:textColorHint="#888"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:padding="14dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="#333"
+            android:textColorHint="#888"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="14dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="#333"
+            android:textColorHint="#888"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="#333"
+            android:textColorHint="#888"
+            android:layout_marginBottom="18dp"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:backgroundTint="#A3D4C3"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:padding="14dp"
+            android:background="@drawable/button_background"/>
+
+        <!-- Go Back to Login Text -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/tvBackToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:text="Go back to login"
+                android:textColor="#A3D4C3"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

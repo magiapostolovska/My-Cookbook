@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF7F0">
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_user"
+    android:layout_alignParentStart="true"
+    android:contentDescription="User" />
+
+    <ImageView
+        android:id="@+id/ivSettings"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_settings"
+    android:layout_alignParentEnd="true"
+    android:contentDescription="Settings" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/rounded_background"
+        android:elevation="4dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_icon1"
+            android:layout_marginBottom="12dp" />
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_icon2"
+            android:layout_marginBottom="12dp" />
+
+        <ImageView
+            android:id="@+id/icon3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_icon3"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe"
+            android:backgroundTint="#A3D4C3"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:padding="14dp"
+            android:background="@drawable/button_background" />
+    </LinearLayout>
+</RelativeLayout>
