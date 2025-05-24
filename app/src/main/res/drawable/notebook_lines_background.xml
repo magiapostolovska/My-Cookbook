@@ -1,0 +1,5 @@
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/ic_line"
+    android:tileModeY="repeat"
+    android:tileModeX="clamp"
+    android:gravity="top|fill_horizontal" />

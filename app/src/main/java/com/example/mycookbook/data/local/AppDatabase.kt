@@ -32,8 +32,5 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
-        fun getDatabase(registerActivity: RegisterActivity): AppDatabase {
-            TODO("Not yet implemented")
-        }
     }
 }
