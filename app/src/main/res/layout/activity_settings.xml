@@ -20,7 +20,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="User"
+        android:contentDescription="@string/user_cd"
         android:src="@drawable/ic_user"
         android:elevation="2dp" />
 
@@ -31,7 +31,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="36dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="Settings"
+        android:contentDescription="@string/settings_cd"
         android:src="@drawable/ic_settings"
         android:elevation="2dp" />
 
@@ -57,7 +57,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:clickable="true"
-                android:contentDescription="Back"
+                android:contentDescription="@string/back_cd"
                 android:focusable="true"
                 android:src="@drawable/ic_back_arrow"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="24dp"
-                android:text="Settings"
+                android:text="@string/settings"
                 android:textColor="#4B1D1D"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
-                android:text="Language"
+                android:text="@string/language"
                 android:textColor="#555"
                 android:textStyle="bold" />
 
@@ -98,7 +98,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="14dp"
-                    android:contentDescription="Dropdown Arrow"
+                    android:contentDescription="@string/dropdown_arrow_cd"
                     android:src="@drawable/ic_arrow_down" />
             </RelativeLayout>
 
@@ -122,14 +122,14 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:layout_marginEnd="12dp"
-                    android:contentDescription="Logout Icon"
+                    android:contentDescription="@string/logout_icon_cd"
                     android:src="@drawable/ic_logout"
                     app:tint="#D32F2F" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Log Out"
+                    android:text="@string/log_out"
                     android:textColor="#D32F2F"
                     android:textSize="16sp"
                     android:textStyle="bold" />

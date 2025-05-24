@@ -10,7 +10,6 @@ import com.example.mycookbook.data.local.dao.UserDao
 import com.example.mycookbook.data.local.entity.Category
 import com.example.mycookbook.data.local.entity.Recipe
 import com.example.mycookbook.data.local.entity.User
-import com.example.mycookbook.ui.screens.RegisterActivity
 
 @Database(entities = [User::class, Category::class, Recipe::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {

@@ -20,7 +20,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="User"
+        android:contentDescription="@string/user_cd"
         android:src="@drawable/ic_user"
         android:elevation="2dp" />
 
@@ -31,7 +31,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="36dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="Settings"
+        android:contentDescription="@string/settings_cd"
         android:src="@drawable/ic_settings"
         android:elevation="2dp" />
 
@@ -41,7 +41,7 @@
         android:layout_height="173dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:contentDescription="Logo"
+        android:contentDescription="@string/logo_cd"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_logo" />
 
@@ -56,7 +56,7 @@
         android:background="@drawable/rounded_background"
         android:elevation="4dp"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="26dp">
 
 
         <RelativeLayout
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="6dp"
-                android:text="Recipes"
+                android:text="@string/recipes"
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -82,7 +82,7 @@
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/circle_button_blue"
                 android:backgroundTint="#A3D4C3"
-                android:contentDescription="Add"
+                android:contentDescription="@string/add_cd"
                 android:padding="12dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_add_black"
@@ -113,15 +113,16 @@
                 android:layout_width="65dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="Breakfast Icon"
+                android:contentDescription="@string/breakfast_cd"
                 android:src="@drawable/ic_icon1" />
 
             <TextView
                 android:layout_width="131dp"
                 android:layout_height="31dp"
-                android:text="  Breakfast"
+                android:layout_marginLeft="15dp"
+                android:text="@string/breakfast"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -142,15 +143,16 @@
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="Lunch Icon"
+                android:contentDescription="@string/lunch_cd"
                 android:src="@drawable/ic_icon2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="     Lunch"
+                android:layout_marginLeft="26dp"
+                android:text="@string/lunch"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -172,15 +174,16 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="Dessert Icon"
+                android:contentDescription="@string/dessert_cd"
                 android:src="@drawable/ic_icon3" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="    Dessert"
+                android:layout_marginLeft="20dp"
+                android:text="@string/dessert"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -202,15 +205,16 @@
                 android:layout_height="58dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="Drinks Icon"
+                android:contentDescription="@string/drinks_cd"
                 android:src="@drawable/ic_icon4" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="   Drinks"
+                android:layout_width="72dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/drinks"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>

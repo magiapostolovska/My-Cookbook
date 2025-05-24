@@ -20,7 +20,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="User"
+        android:contentDescription="@string/user_cd"
         android:src="@drawable/ic_user"
         android:elevation="2dp" />
 
@@ -31,7 +31,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="36dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="Settings"
+        android:contentDescription="@string/settings_cd"
         android:src="@drawable/ic_settings"
         android:elevation="2dp" />
 
@@ -54,8 +54,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/ivBackArrow"
@@ -63,7 +62,7 @@
                     android:layout_height="30dp"
                     android:layout_alignParentStart="true"
                     android:clickable="true"
-                    android:contentDescription="Back"
+                    android:contentDescription="@string/back_cd"
                     android:focusable="true"
                     android:src="@drawable/ic_back_arrow"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -72,7 +71,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="User Profile"
+                    android:layout_marginTop="70dp"
+                    android:text="@string/user_profile_title"
                     android:textColor="#4B1D1D"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -83,7 +83,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentEnd="true"
                     android:clickable="true"
-                    android:contentDescription="Edit"
+                    android:contentDescription="@string/edit_cd"
                     android:focusable="true"
                     android:src="@drawable/ic_edit"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -93,7 +93,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="First Name"
+                android:text="@string/first_name_label"
                 android:textStyle="bold"
                 android:textColor="#555"
                 android:layout_marginBottom="4dp" />
@@ -115,12 +115,12 @@
                 android:padding="14dp"
                 android:visibility="gone"
                 android:textColor="#333"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Last Name"
+                android:text="@string/last_name_label"
                 android:textStyle="bold"
                 android:textColor="#555"
                 android:layout_marginBottom="4dp" />
@@ -142,12 +142,12 @@
                 android:padding="14dp"
                 android:visibility="gone"
                 android:textColor="#333"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="@string/email_hint"
                 android:textStyle="bold"
                 android:textColor="#555"
                 android:layout_marginBottom="4dp" />
@@ -171,13 +171,13 @@
                 android:visibility="gone"
                 android:inputType="textEmailAddress"
                 android:textColor="#333"
-                android:layout_marginBottom="24dp"/>
+                android:layout_marginBottom="24dp" />
 
             <Button
                 android:id="@+id/btnSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Save"
+                android:text="@string/save_button"
                 android:backgroundTint="#A3D4C3"
                 android:textColor="#fff"
                 android:textStyle="bold"
@@ -185,7 +185,6 @@
                 android:background="@drawable/button_background"
                 android:visibility="gone"
                 android:layout_marginTop="16dp" />
-
 
         </LinearLayout>
 
