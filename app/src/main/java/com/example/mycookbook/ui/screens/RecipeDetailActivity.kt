@@ -1,5 +1,6 @@
 package com.example.mycookbook.ui.screens
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -32,6 +33,19 @@ class RecipeDetailActivity : ComponentActivity() {
 
         findViewById<ImageView>(R.id.ivBackArrow).setOnClickListener {
             finish()
+        }
+        findViewById<ImageView>(R.id.ivUser).setOnClickListener {
+            val intent = Intent(this, UserProfileActivity::class.java)
+            intent.putExtra("return_to", "RecipeDetailActivity")
+            intent.putExtra("category_id", categoryId)
+            startActivity(intent)
+        }
+
+        findViewById<ImageView>(R.id.ivSettings).setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            intent.putExtra("return_to", "RecipeDetailActivity")
+            intent.putExtra("category_id", categoryId)
+            startActivity(intent)
         }
     }
 }

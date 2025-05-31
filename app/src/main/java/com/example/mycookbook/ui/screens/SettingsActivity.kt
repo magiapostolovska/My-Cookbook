@@ -107,6 +107,7 @@ class SettingsActivity : ComponentActivity() {
                 "CategoryActivity" -> Intent(this, CategoryActivity::class.java)
                 "UserProfileActivity" -> Intent(this, UserProfileActivity::class.java)
                 "AddRecipeActivity" -> Intent(this, AddRecipeActivity::class.java)
+                "RecipeDetailActivity" -> Intent(this, RecipeDetailActivity::class.java)
                 else -> Intent(this, MainActivity::class.java)
             }
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
