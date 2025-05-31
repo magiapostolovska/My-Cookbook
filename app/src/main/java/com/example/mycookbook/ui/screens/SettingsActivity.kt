@@ -17,16 +17,19 @@ class SettingsActivity : ComponentActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private var languageChanged = false
     private var savedLang: String? = null
+    private var returnTo: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        returnTo = intent.getStringExtra("return_to")
 
         val spinnerLanguage = findViewById<Spinner>(R.id.spinnerLanguage)
         val btnLogout = findViewById<LinearLayout>(R.id.btnLogout)
         val ivBackArrow = findViewById<ImageView>(R.id.ivBackArrow)
+        val ivUserIcon = findViewById<ImageView>(R.id.ivUser)
 
         val languages = resources.getStringArray(R.array.language_options)
         savedLang = sharedPreferences.getString("app_language", "en")
@@ -54,7 +57,7 @@ class SettingsActivity : ComponentActivity() {
                 textView.text = getItem(position)
 
                 if (position == spinnerLanguage.selectedItemPosition) {
-                    view.setBackgroundColor(android.graphics.Color.parseColor("#D3D3D3")) // grey
+                    view.setBackgroundColor(android.graphics.Color.parseColor("#D3D3D3"))
                     textView.setTextColor(android.graphics.Color.BLACK)
                     checkmark.visibility = View.VISIBLE
                 } else {
@@ -86,6 +89,11 @@ class SettingsActivity : ComponentActivity() {
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
+        ivUserIcon.setOnClickListener {
+            val intent = Intent(this, UserProfileActivity::class.java)
+            intent.putExtra("return_to", "SettingsActivity")
+            startActivity(intent)
+        }
 
         btnLogout.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -95,7 +103,12 @@ class SettingsActivity : ComponentActivity() {
         }
 
         ivBackArrow.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = when (returnTo) {
+                "CategoryActivity" -> Intent(this, CategoryActivity::class.java)
+                "UserProfileActivity" -> Intent(this, UserProfileActivity::class.java)
+                "AddRecipeActivity" -> Intent(this, AddRecipeActivity::class.java)
+                else -> Intent(this, MainActivity::class.java)
+            }
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
             finish()

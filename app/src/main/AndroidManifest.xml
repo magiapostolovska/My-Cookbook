@@ -20,6 +20,11 @@
 
         <activity android:name=".ui.screens.SettingsActivity" />
         <activity android:name=".ui.screens.UserProfileActivity" />
+        <activity android:name=".ui.screens.AddRecipeActivity" />
+        <activity android:name=".ui.screens.CategoryActivity" />
+        <activity android:name=".ui.screens.RecipeDetailActivity" />
+
+
 
         <activity
             android:name=".ui.screens.LoginActivity"

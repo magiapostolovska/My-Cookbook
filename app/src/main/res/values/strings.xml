@@ -41,4 +41,24 @@
     <string name="email_label">Email</string>
     <string name="save_button">Save</string>
 
+    <string name="add_recipe_title">Add a new Recipe</string>
+    <string name="hint_recipe_name">Recipe Name</string>
+    <string name="hint_ingredients">Ingredients</string>
+    <string name="hint_instructions">Instructions</string>
+    <string name="hint_category">Category</string>
+
+    <string name="recipe_name_label">Recipe Name</string>
+    <string name="ingredients_label">Ingredients</string>
+    <string name="instructions_label">Instructions</string>
+    <string name="category_label">Category</string>
+    
+    <string-array name="category_options">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dessert</item>
+        <item>Drinks</item>
+    </string-array>
+
+    <dimen name="item_vertical_spacing">-8.5dp</dimen>
+
 </resources>

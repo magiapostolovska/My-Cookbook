@@ -93,20 +93,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:text="@string/first_name_label"
-                android:textStyle="bold"
                 android:textColor="#555"
-                android:layout_marginBottom="4dp" />
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/edittext_background"
                 android:padding="14dp"
                 android:text="John"
                 android:textColor="#333"
-                android:layout_marginBottom="16dp" />
+                android:textSize="16dp" />
             <EditText
                 android:id="@+id/etFirstName"
                 android:layout_width="match_parent"
@@ -115,25 +117,28 @@
                 android:padding="14dp"
                 android:visibility="gone"
                 android:textColor="#333"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:textSize="16dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:text="@string/last_name_label"
-                android:textStyle="bold"
                 android:textColor="#555"
-                android:layout_marginBottom="4dp" />
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/edittext_background"
                 android:padding="14dp"
                 android:text="Doe"
                 android:textColor="#333"
-                android:layout_marginBottom="16dp" />
+                android:textSize="16dp" />
             <EditText
                 android:id="@+id/etLastName"
                 android:layout_width="match_parent"
@@ -142,25 +147,28 @@
                 android:padding="14dp"
                 android:visibility="gone"
                 android:textColor="#333"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:textSize="16dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:text="@string/email_hint"
-                android:textStyle="bold"
                 android:textColor="#555"
-                android:layout_marginBottom="4dp" />
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/edittext_background"
                 android:padding="14dp"
                 android:text="john.doe@example.com"
                 android:textColor="#333"
-                android:layout_marginBottom="24dp" />
+                android:textSize="16dp" />
 
             <EditText
                 android:id="@+id/etEmail"
@@ -171,7 +179,8 @@
                 android:visibility="gone"
                 android:inputType="textEmailAddress"
                 android:textColor="#333"
-                android:layout_marginBottom="24dp" />
+                android:layout_marginBottom="24dp"
+                android:textSize="16dp"/>
 
             <Button
                 android:id="@+id/btnSave"

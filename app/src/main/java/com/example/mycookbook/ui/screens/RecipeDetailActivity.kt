@@ -1,25 +1,37 @@
 package com.example.mycookbook.ui.screens
 
 import android.os.Bundle
-import android.widget.RelativeLayout
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.activity.ComponentActivity
 import com.example.mycookbook.R
 
-class RecipeDetailActivity : AppCompatActivity() {
+class RecipeDetailActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipe_detail)
 
-        val categoryId = intent.getIntExtra("categoryId", -1)
-        val rootLayout = findViewById<RelativeLayout>(R.id.rootLayout)
+        val categoryId = intent.getIntExtra("recipe_category_id", -1)
+        val layoutResId = when (categoryId) {
+            1 -> R.layout.activity_recipe_detail
+            2 -> R.layout.activity_recipe_detail2
+            3 -> R.layout.activity_recipe_detail3
+            4 -> R.layout.activity_recipe_detail4
+            else -> R.layout.activity_recipe_detail
+        }
+        setContentView(layoutResId)
 
-        when (categoryId) {
-            1 -> rootLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.breakfast_yellow))
-            2 -> rootLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.lunch_purple))
-            3 -> rootLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.dessert_peach))
-            4 -> rootLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.drinks_blue))
+        val title = intent.getStringExtra("recipe_title") ?: "No Title"
+        val ingredients = intent.getStringExtra("recipe_ingredients") ?: "No Ingredients"
+        val instructions = intent.getStringExtra("recipe_instructions") ?: "No Instructions"
+
+        findViewById<TextView>(R.id.tvTitle).text = title
+        findViewById<TextView>(R.id.tvIngredients).text = ingredients
+        findViewById<TextView>(R.id.tvInstructions).text = instructions
+
+        findViewById<ImageView>(R.id.ivBackArrow).setOnClickListener {
+            finish()
         }
     }
 }

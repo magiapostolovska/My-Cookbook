@@ -209,7 +209,7 @@
                 android:src="@drawable/ic_icon4" />
 
             <TextView
-                android:layout_width="72dp"
+                android:layout_width="134dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
                 android:text="@string/drinks"

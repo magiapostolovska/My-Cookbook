@@ -17,6 +17,7 @@ class UserProfileActivity : ComponentActivity() {
     private lateinit var ivBackArrow: ImageView
     private lateinit var ivEdit: ImageView
     private lateinit var btnSave: Button
+    private lateinit var ivSettings: ImageView
 
     private lateinit var tvFirstName: TextView
     private lateinit var tvLastName: TextView
@@ -30,14 +31,20 @@ class UserProfileActivity : ComponentActivity() {
 
     private var currentUser: User? = null
     private var isEditing = false
+    private var returnTo: String? = null
+    private var categoryId: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_profile)
 
+        returnTo = intent.getStringExtra("return_to")
+        categoryId = intent.getIntExtra("category_id", -1)
+
         ivBackArrow = findViewById(R.id.ivBackArrow)
         ivEdit = findViewById(R.id.ivEdit)
         btnSave = findViewById(R.id.btnSave)
+        ivSettings = findViewById(R.id.ivSettings)
 
         tvFirstName = findViewById(R.id.tvFirstName)
         tvLastName = findViewById(R.id.tvLastName)
@@ -63,7 +70,12 @@ class UserProfileActivity : ComponentActivity() {
                 currentUser?.let { populateUserInfo(it) }
                 toggleEditMode(false)
             } else {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = when (returnTo) {
+                    "SettingsActivity" -> Intent(this, SettingsActivity::class.java)
+                    "CategoryActivity" -> Intent(this, CategoryActivity::class.java)
+                    "AddRecipeActivity" -> Intent(this, AddRecipeActivity::class.java)
+                    else -> Intent(this, MainActivity::class.java)
+                }
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
                 startActivity(intent)
                 finish()
@@ -72,6 +84,12 @@ class UserProfileActivity : ComponentActivity() {
 
         ivEdit.setOnClickListener {
             toggleEditMode(true)
+        }
+
+        ivSettings.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            intent.putExtra("return_to", "UserProfileActivity")
+            startActivity(intent)
         }
 
         btnSave.setOnClickListener {

@@ -53,7 +53,7 @@ class RegisterActivity : ComponentActivity() {
                     db.userDao().insert(newUser)
                     runOnUiThread {
                         Toast.makeText(this@RegisterActivity, "Registered $firstName successfully", Toast.LENGTH_SHORT).show()
-                        finish()  // Back to login screen
+                        finish()
                     }
                 }
             }
