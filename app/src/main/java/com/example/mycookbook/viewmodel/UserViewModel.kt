@@ -10,37 +10,36 @@ import com.example.mycookbook.data.local.entity.User
 import kotlinx.coroutines.launch
 
 class UserViewModel(app: Application) : AndroidViewModel(app) {
-    private val db = AppDatabase.getInstance(app)
-    private val dao = db.userDao()
+    private val dao = AppDatabase.getInstance(app).userDao()
 
-    private val _users = MutableLiveData<List<User>>()
-    val users: LiveData<List<User>> = _users
+    private val _user = MutableLiveData<User?>()
+    val user: LiveData<User?> = _user
 
-    fun loadAll() {
+    fun loadUserById(userId: Int) {
         viewModelScope.launch {
-            val allUsers = dao.getAll()
-            _users.postValue(allUsers)
+            val foundUser = dao.getUserById(userId)
+            _user.postValue(foundUser)
         }
     }
 
     fun add(user: User) {
         viewModelScope.launch {
             dao.insert(user)
-            loadAll()
         }
     }
 
     fun update(user: User) {
         viewModelScope.launch {
             dao.update(user)
-            loadAll()
+            val refreshedUser = dao.getUserById(user.id)
+            _user.postValue(refreshedUser)
         }
     }
 
     fun delete(user: User) {
         viewModelScope.launch {
             dao.delete(user)
-            loadAll()
+            _user.postValue(null)
         }
     }
 }

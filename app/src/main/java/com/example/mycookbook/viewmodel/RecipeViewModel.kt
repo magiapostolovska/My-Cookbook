@@ -43,4 +43,10 @@ class RecipeViewModel(app: Application) : AndroidViewModel(app) {
             loadAll()
         }
     }
+    fun loadGuestRecipesByCategory(guestId: String, categoryId: Int) {
+        viewModelScope.launch {
+            val guestRecipes = dao.getRecipesByCategoryIdAndGuestId(categoryId, guestId)
+            _recipes.postValue(guestRecipes)
+        }
+    }
 }

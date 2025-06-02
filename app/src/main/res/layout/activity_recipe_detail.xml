@@ -103,7 +103,7 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="531dp"
                 android:background="@drawable/notebook_lines_background" />
 
         </LinearLayout>
@@ -123,7 +123,7 @@
                 android:layout_marginTop="138dp"
                 android:layout_marginBottom="20dp"
                 android:lineSpacingExtra="10dp"
-                android:text="Spaghetti Carbonara"
+                android:text=""
                 android:textColor="#4B1D1D"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-5dp"
                 android:layout_marginBottom="18dp"
-                android:text="Ingredients"
+                android:text="@string/ingredients"
                 android:textColor="#4B1D1D"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -144,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="19dp"
                 android:lineSpacingExtra="20dp"
-                android:text="• 200g spaghetti\n• 2 eggs\n• 3 slices bacon"
+                android:text=""
                 android:textColor="#4B1D1D"
                 android:textSize="16dp" />
 
@@ -152,7 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="Instructions"
+                android:text="@string/instructions"
                 android:textColor="#4B1D1D"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -160,13 +160,26 @@
             <TextView
                 android:id="@+id/tvInstructions"
                 android:layout_width="321dp"
-                android:layout_height="266dp"
+                android:layout_height="224dp"
                 android:lineSpacingExtra="22dp"
-                android:text="1. Cook the pasta.\n2. Mix eggs and cheese.\n3. Fry bacon."
+                android:text=""
                 android:textColor="#4B1D1D"
                 android:textSize="16dp" />
 
+
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="640dp"
+            android:contentDescription=""
+            android:elevation="10dp"
+            android:src="@drawable/ic_delete" />
 
         <ImageView
             android:id="@+id/ivBackArrow"

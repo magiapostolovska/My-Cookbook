@@ -15,7 +15,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-@Database(entities = [User::class, Category::class, Recipe::class], version = 1)
+@Database(entities = [User::class, Category::class, Recipe::class], version = 4)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
@@ -33,19 +33,21 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "cookbook.db"
                 )
+                    .fallbackToDestructiveMigration()
                     .addCallback(object : RoomDatabase.Callback() {
                         override fun onCreate(db: SupportSQLiteDatabase) {
                             super.onCreate(db)
                             CoroutineScope(Dispatchers.IO).launch {
                                 getInstance(context).categoryDao().apply {
-                                    insert(Category(name = "Breakfast"))
-                                    insert(Category(name = "Lunch"))
-                                    insert(Category(name = "Dessert"))
-                                    insert(Category(name = "Drinks"))
+                                    insert(Category(name = "Breakfast", userId = 0))
+                                    insert(Category(name = "Lunch", userId = 0))
+                                    insert(Category(name = "Dessert", userId = 0))
+                                    insert(Category(name = "Drinks", userId = 0))
                                 }
                             }
                         }
                     })
+
                     .build()
                 INSTANCE = instance
                 instance

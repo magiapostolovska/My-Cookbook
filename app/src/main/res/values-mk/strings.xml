@@ -1,0 +1,103 @@
+<resources>
+
+    <string name="user_cd">Корисник</string>
+    <string name="settings_cd">Поставки</string>
+    <string name="logo_cd">Лого</string>
+    <string name="recipes">Рецепти</string>
+    <string name="add_cd">Додади</string>
+    <string name="breakfast_cd">Икона за појадок</string>
+    <string name="lunch_cd">Икона за ручек</string>
+    <string name="dessert_cd">Икона за десерт</string>
+    <string name="drinks_cd">Икона за пијалоци</string>
+    <string name="back_cd">Назад</string>
+    <string name="dropdown_arrow_cd">Стрелка надолу</string>
+    <string name="logout_icon_cd">Икона за одјава</string>
+    <string name="edit_cd">Уреди</string>
+
+    <string name="breakfast">Појадок</string>
+    <string name="lunch">Ручек</string>
+    <string name="dessert">Десерт</string>
+    <string name="drinks">Пијалоци</string>
+
+    <string name="email_hint">Е-пошта</string>
+    <string name="password_hint">Лозинка</string>
+    <string name="login">Најави се</string>
+    <string name="register">Регистрирај се</string>
+    <string name="go_to_register">Немаш сметка? Регистрирај се</string>
+    <string name="go_to_login">Врати се на најава</string>
+
+    <string name="settings">Поставки</string>
+    <string name="language">Јазик</string>
+    <string name="log_out">Одјави се</string>
+    <string-array name="language_options">
+        <item>Англиски</item>
+        <item>Македонски</item>
+    </string-array>
+
+    <string name="user_profile_title">Кориснички профил</string>
+    <string name="first_name_label">Име</string>
+    <string name="last_name_label">Презиме</string>
+    <string name="email_label">Е-пошта</string>
+    <string name="save_button">Зачувај</string>
+
+    <string name="add_recipe_title">Додади нов рецепт</string>
+    <string name="hint_recipe_name">Име на рецептот</string>
+    <string name="hint_ingredients">Состојки</string>
+    <string name="hint_instructions">Упатства</string>
+    <string name="hint_category">Категорија</string>
+
+    <string name="recipe_name_label">Име на рецептот</string>
+    <string name="ingredients_label">Состојки</string>
+    <string name="instructions_label">Упатства</string>
+    <string name="category_label">Категорија</string>
+
+    <string-array name="category_options">
+        <item>Појадок</item>
+        <item>Ручек</item>
+        <item>Десерт</item>
+        <item>Пијалоци</item>
+    </string-array>
+
+    <string name="delete_recipe_title">Избриши Рецепт</string>
+    <string name="delete_recipe_message">Дали си сигурен дека сакаш да го избришеш рецептот?</string>
+    <string name="delete">Избриши</string>
+    <string name="cancel">Откажи</string>
+    <string name="delete_account_title">Избриши профил</string>
+    <string name="delete_account_message">Дали сте сигурни дека сакате да го избришете вашиот профил? Оваа акција е неповратна.</string>
+
+    <string name="instructions">Упатство</string>
+    <string name="ingredients">Состојки</string>
+
+    <string name="recipe_not_found">Рецептот не е пронајден.</string>
+    <string name="recipe_failed_to_load">Не успеа вчитувањето на рецептот.</string>
+    <string name="recipe_deleted_success">Рецептот е успешно избришан.</string>
+    <string name="recipe_delete_failed">Не успеа бришењето на рецептот.</string>
+    <string name="recipe_not_loaded_yet">Рецептот сѐ уште не е вчитан.</string>
+    <string name="login_success_facebook">Најавата преку е Facebook успешна!</string>
+    <string name="login_cancelled_facebook">Најавата преку Facebook е откажана.</string>
+    <string name="login_failed_facebook">Не успеа најавата преку Facebook.</string>
+    <string name="empty_email_password">Е-mail и лозинка не можат да бидат празни.</string>
+    <string name="login_success_email">Успешна најава со е-mail!</string>
+    <string name="login_failed_email">Невалидна е-mail или лозинка.</string>
+    <string name="login_success_guest">Најавен како гостин.</string>
+    <string name="login_success_google">Најавата преку Google е успешна!</string>
+    <string name="login_failed_google">Не успеа најавата преку Google.</string>
+    <string name="recipes_load_failed">Не успеа вчитувањето на рецептите.</string>
+    <string name="invalid_user_id">Невалиден кориснички ID. Не може да се вчитаат рецептите.</string>
+    <string name="toast_fill_all_fields">Ве молиме пополнете ги сите полиња.</string>
+    <string name="toast_recipe_saved">Рецептот е успешно зачуван!</string>
+    <string name="toast_email_already_exists">Овој e-mail веќе постои. Ве молиме користете друг.</string>
+    <string name="toast_registration_success">Регистрацијата е успешна!</string>
+    <string name="toast_language_changed">Јазикот е променет.</string>
+    <string name="toast_logged_out">Одјавување.</string>
+
+    <string name="edit_cancelled">Уредувањето е откажано.</string>
+    <string name="profile_updated">Профилот е успешно ажуриран.</string>
+    <string name="profile_update_failed">Не успеа ажурирањето на профилот. Обидете се повторно.</string>
+    <string name="load_profile_failed">Не успеа вчитувањето на податоците од профилот.</string>
+    <string name="account_deleted">Вашиот профил е избришан.</string>
+    <string name="account_delete_failed">Не успеа бришењето на профилот. Обидете се повторно.</string>
+
+
+</resources>
+

@@ -181,6 +181,25 @@
                 android:textColor="#333"
                 android:layout_marginBottom="24dp"
                 android:textSize="16dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="12dp"
+                android:background="#CCCCCC" />
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="265dp"
+                android:clickable="true"
+                android:contentDescription="Delete"
+                android:elevation="5dp"
+                android:focusable="true"
+                android:src="@drawable/ic_delete"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/btnSave"
@@ -193,7 +212,8 @@
                 android:padding="14dp"
                 android:background="@drawable/button_background"
                 android:visibility="gone"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
 
         </LinearLayout>
 

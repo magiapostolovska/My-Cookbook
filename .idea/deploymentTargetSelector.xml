@@ -4,11 +4,11 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-05-25T00:41:01.880274300Z">
+        <DropdownSelection timestamp="2025-06-01T23:23:43.244960Z">
           <Target type="DEFAULT_BOOT">
-            <template>
-              <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=a15/34" />
-            </template>
+            <handle>
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=R5CW51HBWMV" />
+            </handle>
           </Target>
         </DropdownSelection>
         <DialogSelection />
