@@ -47,7 +47,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login"
-            android:backgroundTint="#A3D4C3"
             android:textColor="#fff"
             android:textStyle="bold"
             android:padding="14dp"
@@ -61,7 +60,6 @@
             android:layout_marginTop="16dp"
             android:layout_gravity="center_horizontal">
 
-            <!-- Google Sign-In Button -->
             <ImageButton
                 android:id="@+id/btnGoogleSignIn"
                 android:layout_width="50dp"
@@ -74,7 +72,6 @@
                 android:src="@drawable/ic_google"
                 tools:ignore="TouchTargetSizeCheck" />
 
-            <!-- Facebook Login Button -->
             <ImageButton
                 android:id="@+id/btnFacebookLogin"
                 android:layout_width="56dp"
@@ -87,7 +84,6 @@
                 android:src="@drawable/ic_fb"
                 tools:ignore="TouchTargetSizeCheck" />
 
-            <!-- Guest Login Button -->
             <ImageButton
                 android:id="@+id/btnAnonymousLogin"
                 android:layout_width="50dp"
@@ -120,7 +116,7 @@
                 android:minHeight="48dp"
                 android:padding="8dp"
                 android:text="@string/go_to_register"
-                android:textColor="#A3D4C3"
+                android:textColor="@color/text_color_selector"
                 android:textSize="16dp"
                 android:textStyle="bold" />
         </FrameLayout>

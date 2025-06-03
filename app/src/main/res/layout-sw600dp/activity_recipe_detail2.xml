@@ -19,24 +19,25 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@id/navbarBackground"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="12dp"
-        android:contentDescription="User"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/user_cd"
         android:src="@drawable/ic_user"
-        android:elevation="2dp" />
+        android:elevation="1dp"
+        android:background="@drawable/user_icon" />
+
 
     <ImageView
         android:id="@+id/ivSettings"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@id/navbarBackground"
         android:layout_marginEnd="36dp"
-        android:layout_marginTop="12dp"
-        android:contentDescription="Settings"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/settings_cd"
         android:src="@drawable/ic_settings"
-        android:elevation="2dp" />
+        android:elevation="1dp"
+        android:background="@drawable/user_icon"/>
 
     <FrameLayout
         android:id="@+id/noteFrame"
@@ -201,10 +202,11 @@
             android:layout_marginTop="157dp"
             android:clickable="true"
             android:contentDescription="@string/back_cd"
-            android:elevation="10dp"
+            android:elevation="0dp"
             android:focusable="true"
             android:src="@drawable/ic_back_arrow"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck"
+            android:background="@drawable/user_icon"/>
 
     </FrameLayout>
 

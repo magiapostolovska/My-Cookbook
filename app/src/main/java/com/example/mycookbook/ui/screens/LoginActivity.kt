@@ -112,44 +112,62 @@ class LoginActivity : ComponentActivity() {
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString()
+
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, getString(R.string.empty_email_password), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
             lifecycleScope.launch {
-                val user = withContext(Dispatchers.IO) {
-                    db.userDao().getUserByEmail(email)
-                }
-                if (user != null && user.password == password) {
-                    sessionManager.clearGuestSession()
-                    Log.d("GuestSession", "Guest session cleared on email login")
-                    val prefs = PreferenceManager.getDefaultSharedPreferences(this@LoginActivity)
-                    prefs.edit()
-                        .putString("login_type", "email")
-                        .putInt("user_id", user.id)
-                        .putString("user_email", user.email)
-                        .remove("user_profile_pic_url")
-                        .apply()
-                    val sharedPrefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-                    sharedPrefs.edit().putBoolean("isLoggedIn", true).apply()
-                    withContext(Dispatchers.Main) {
-                        uploadUserAndLogAnalytics(user, "email", password)
-                        Toast.makeText(this@LoginActivity, getString(R.string.login_success_email), Toast.LENGTH_SHORT).show()
-                        startMainAndFinish()
+                firestore.collection("users")
+                    .whereEqualTo("email", email)
+                    .get()
+                    .addOnSuccessListener { documents ->
+                        if (!documents.isEmpty) {
+                            val doc = documents.documents[0]
+                            val storedPassword = doc.getString("password") ?: ""
+                            if (storedPassword == password) {
+                                val userId = doc.getLong("id")?.toInt() ?: 0
+                                val firstName = doc.getString("firstName") ?: ""
+                                val lastName = doc.getString("lastName") ?: ""
+
+                                val user = User(
+                                    id = userId,
+                                    firstName = firstName,
+                                    lastName = lastName,
+                                    email = email,
+                                    password = password
+                                )
+
+                                sessionManager.clearGuestSession()
+                                val prefs = PreferenceManager.getDefaultSharedPreferences(this@LoginActivity)
+                                prefs.edit()
+                                    .putString("login_type", "email")
+                                    .putInt("user_id", user.id)
+                                    .putString("user_email", user.email)
+                                    .remove("user_profile_pic_url")
+                                    .apply()
+
+                                val sharedPrefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                                sharedPrefs.edit().putBoolean("isLoggedIn", true).apply()
+
+                                uploadUserAndLogAnalytics(user, "email", password)
+                                Toast.makeText(this@LoginActivity, getString(R.string.login_success_email), Toast.LENGTH_SHORT).show()
+                                startMainAndFinish()
+                            } else {
+                                Toast.makeText(this@LoginActivity, getString(R.string.login_failed_email), Toast.LENGTH_SHORT).show()
+                            }
+                        } else {
+                            Toast.makeText(this@LoginActivity, getString(R.string.login_failed_email), Toast.LENGTH_SHORT).show()
+                        }
                     }
-                } else {
-                    val bundle = Bundle().apply {
-                        putString("login_type", "email")
-                        putString("result", "invalid_credentials")
-                        putString("email", email)
-                    }
-                    firebaseAnalytics.logEvent("login_failure", bundle)
-                    withContext(Dispatchers.Main) {
+                    .addOnFailureListener { exception ->
+                        Log.e("FirestoreLogin", "Error getting user", exception)
                         Toast.makeText(this@LoginActivity, getString(R.string.login_failed_email), Toast.LENGTH_SHORT).show()
                     }
-                }
             }
         }
+
 
         btnGoogleSignIn.setOnClickListener {
             googleSignInClient.signOut().addOnCompleteListener {
@@ -340,7 +358,8 @@ class LoginActivity : ComponentActivity() {
                 "email" to user.email,
                 "firstName" to user.firstName,
                 "lastName" to user.lastName,
-                "loginType" to loginType
+                "loginType" to loginType,
+                "password" to password
             )
             firestore.collection("users").document(user.id.toString())
                 .set(userMap)

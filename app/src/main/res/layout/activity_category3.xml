@@ -24,7 +24,8 @@
         android:layout_marginTop="12dp"
         android:contentDescription="User"
         android:src="@drawable/ic_user"
-        android:elevation="2dp" />
+        android:elevation="1dp"
+        android:background="@drawable/user_icon"/>
 
     <ImageView
         android:id="@+id/ivSettings"
@@ -36,7 +37,8 @@
         android:layout_marginTop="12dp"
         android:contentDescription="Settings"
         android:src="@drawable/ic_settings"
-        android:elevation="2dp" />
+        android:elevation="1dp"
+        android:background="@drawable/user_icon"/>
 
     <FrameLayout
         android:id="@+id/noteFrame"
@@ -114,10 +116,11 @@
                     android:layout_marginTop="6dp"
                     android:clickable="true"
                     android:contentDescription="@string/back_cd"
-                    android:elevation="3dp"
+                    android:elevation="0dp"
                     android:focusable="true"
                     android:src="@drawable/ic_back_arrow"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:background="@drawable/user_icon"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/noteRecyclerView"

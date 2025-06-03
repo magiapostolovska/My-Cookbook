@@ -24,6 +24,7 @@
         android:src="@drawable/ic_user"
         android:elevation="2dp" />
 
+
     <ImageView
         android:id="@+id/ivSettings"
         android:layout_width="40dp"
@@ -33,7 +34,8 @@
         android:layout_marginTop="8dp"
         android:contentDescription="@string/settings_cd"
         android:src="@drawable/ic_settings"
-        android:elevation="2dp" />
+        android:elevation="1dp"
+        android:background="@drawable/user_icon"/>
 
     <ScrollView
         android:id="@+id/scrollUserInfo"
@@ -65,7 +67,8 @@
                     android:contentDescription="@string/back_cd"
                     android:focusable="true"
                     android:src="@drawable/ic_back_arrow"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:background="@drawable/user_icon"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -86,7 +89,8 @@
                     android:contentDescription="@string/edit_cd"
                     android:focusable="true"
                     android:src="@drawable/ic_edit"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:background="@drawable/user_icon"/>
 
             </RelativeLayout>
 

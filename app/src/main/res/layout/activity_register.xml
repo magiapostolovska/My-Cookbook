@@ -76,7 +76,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/register"
-            android:backgroundTint="#A3D4C3"
             android:textColor="#fff"
             android:textStyle="bold"
             android:padding="14dp"
@@ -100,7 +99,7 @@
                 android:minHeight="48dp"
                 android:padding="8dp"
                 android:text="@string/go_to_login"
-                android:textColor="#A3D4C3"
+                android:textColor="@color/text_color_selector"
                 android:textSize="16dp"
                 android:textStyle="bold" />
         </FrameLayout>

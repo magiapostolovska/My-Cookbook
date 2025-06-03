@@ -24,5 +24,6 @@
         android:layout_height="24dp"
         android:contentDescription="Go to recipe"
         android:src="@drawable/ic_arrow_right"
+        android:background="@drawable/user_icon"
         />
 </LinearLayout>

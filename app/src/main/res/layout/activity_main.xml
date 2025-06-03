@@ -22,7 +22,9 @@
         android:layout_marginTop="8dp"
         android:contentDescription="@string/user_cd"
         android:src="@drawable/ic_user"
-        android:elevation="2dp" />
+        android:elevation="1dp"
+        android:background="@drawable/user_icon" />
+
 
     <ImageView
         android:id="@+id/ivSettings"
@@ -33,7 +35,8 @@
         android:layout_marginTop="8dp"
         android:contentDescription="@string/settings_cd"
         android:src="@drawable/ic_settings"
-        android:elevation="2dp" />
+        android:elevation="1dp"
+        android:background="@drawable/user_icon"/>
 
     <ImageView
         android:id="@+id/ivLogo"
@@ -81,20 +84,19 @@
                 android:layout_height="36dp"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/circle_button_blue"
-                android:backgroundTint="#A3D4C3"
                 android:contentDescription="@string/add_cd"
                 android:padding="12dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_add_black"
-                app:tint="#000"
+                app:tint="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginBottom="12dp"
-            android:background="#A3D4C3" />
+            android:background="@color/black" />
 
         <LinearLayout
             android:id="@+id/btnBreakfast"
