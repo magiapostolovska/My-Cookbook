@@ -46,9 +46,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginTop="70dp"
             android:background="@drawable/rounded_background"
             android:elevation="4dp"
+            android:orientation="vertical"
             android:padding="24dp">
 
             <ImageView
@@ -76,92 +77,91 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/recipe_name_label"
-                android:textStyle="bold"
-                android:textColor="#555"
                 android:layout_marginBottom="4dp"
-                android:textSize="16dp"/>
+                android:text="@string/recipe_name_label"
+                android:textColor="#555"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etRecipeName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_recipe_name"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/edittext_background"
+                android:hint="@string/hint_recipe_name"
                 android:padding="14dp"
                 android:textColor="#333"
                 android:textColorHint="#888"
-                android:layout_marginBottom="16dp"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/ingredients_label"
-                android:textStyle="bold"
-                android:textColor="#555"
                 android:layout_marginBottom="4dp"
-                android:textSize="16dp"/>
+                android:text="@string/ingredients_label"
+                android:textColor="#555"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etIngredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_ingredients"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/edittext_background"
-                android:padding="14dp"
-                android:textColor="#333"
-                android:textColorHint="#888"
+                android:gravity="top"
+                android:hint="@string/hint_ingredients"
                 android:inputType="textMultiLine"
                 android:lines="4"
                 android:maxLines="6"
-                android:gravity="top"
-                android:scrollbars="vertical"
                 android:overScrollMode="always"
-                android:layout_marginBottom="16dp"
-                android:textSize="16dp"/>
+                android:padding="14dp"
+                android:scrollbars="vertical"
+                android:textColor="#333"
+                android:textColorHint="#888"
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/instructions_label"
-                android:textStyle="bold"
-                android:textColor="#555"
                 android:layout_marginBottom="4dp"
-                android:textSize="16dp"/>
+                android:text="@string/instructions_label"
+                android:textColor="#555"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/etInstructions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_instructions"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/edittext_background"
-                android:padding="14dp"
-                android:textColor="#333"
-                android:textColorHint="#888"
+                android:gravity="top"
+                android:hint="@string/hint_instructions"
                 android:inputType="textMultiLine"
                 android:lines="4"
                 android:maxLines="6"
-                android:gravity="top"
-                android:scrollbars="vertical"
                 android:overScrollMode="always"
-                android:layout_marginBottom="16dp"
-                android:textSize="16dp"/>
+                android:padding="14dp"
+                android:scrollbars="vertical"
+                android:textColor="#333"
+                android:textColorHint="#888"
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/category_label"
-                android:textStyle="bold"
-                android:textColor="#555"
                 android:layout_marginBottom="4dp"
-                android:textSize="16dp"/>
+                android:text="@string/category_label"
+                android:textColor="#555"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                >
+                android:layout_marginBottom="24dp">
 
                 <Spinner
                     android:id="@+id/spinnerCategory"
@@ -169,7 +169,7 @@
                     android:layout_height="56dp"
                     android:background="@drawable/edittext_background"
                     android:padding="0dp"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp" />
 
                 <ImageView
                     android:id="@+id/ivDropdownArrow"

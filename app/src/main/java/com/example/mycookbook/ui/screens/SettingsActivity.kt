@@ -2,6 +2,7 @@ package com.example.mycookbook.ui.screens
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -32,10 +33,16 @@ class SettingsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val screenLayout = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+        if (screenLayout >= Configuration.SCREENLAYOUT_SIZE_LARGE) {
+            setContentView(R.layout.activity_settings)
+        } else {
+            setContentView(R.layout.activity_settings)
+        }
+
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         firebaseAnalytics.logEvent("settings_screen_opened", null)
 
-        setContentView(R.layout.activity_settings)
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
         returnTo = intent.getStringExtra("return_to")

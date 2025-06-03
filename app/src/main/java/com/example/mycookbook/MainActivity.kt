@@ -17,6 +17,7 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.coroutines.tasks.await
+import android.content.res.Configuration
 
 class MainActivity : ComponentActivity() {
 
@@ -66,7 +67,13 @@ class MainActivity : ComponentActivity() {
         }
 
         setAppLocaleFromPreferences()
-        setContentView(R.layout.activity_main)
+
+        val screenLayout = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+        if (screenLayout >= Configuration.SCREENLAYOUT_SIZE_LARGE) {
+            setContentView(R.layout.activity_main)
+        } else {
+            setContentView(R.layout.activity_main)
+        }
 
         val ivUser = findViewById<ImageView>(R.id.ivUser)
         if (loginType == "guest") {
@@ -167,4 +174,3 @@ class MainActivity : ComponentActivity() {
         resources.updateConfiguration(config, resources.displayMetrics)
     }
 }
-

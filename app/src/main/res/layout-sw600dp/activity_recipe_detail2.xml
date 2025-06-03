@@ -1,0 +1,211 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lunch_purple">
+
+    <View
+        android:id="@+id/navbarBackground"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/white_navbar_background"
+        android:elevation="1dp" />
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@id/navbarBackground"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="User"
+        android:src="@drawable/ic_user"
+        android:elevation="2dp" />
+
+    <ImageView
+        android:id="@+id/ivSettings"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/navbarBackground"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Settings"
+        android:src="@drawable/ic_settings"
+        android:elevation="2dp" />
+
+    <FrameLayout
+        android:id="@+id/noteFrame"
+        android:layout_width="581dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="4dp"
+        tools:ignore="ExtraText">
+
+        <LinearLayout
+            android:layout_width="500dp"
+            android:layout_height="800dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/rounded_white_card"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/purple_circle" />
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/purple_circle" />
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/purple_circle" />
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/purple_circle" />
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/purple_circle" />
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/purple_circle" />
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/purple_circle" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="500dp"
+                android:layout_height="800dp"
+                android:background="@drawable/notebook_lines_background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="500dp"
+            android:layout_height="800dp"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="138dp"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="10dp"
+                android:text=""
+                android:textColor="#4B1D1D"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="18dp"
+                android:text="@string/ingredients"
+                android:textColor="#4B1D1D"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginBottom="19dp"
+                android:lineSpacingExtra="20dp"
+                android:text=""
+                android:textColor="#4B1D1D"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/instructions"
+                android:textColor="#4B1D1D"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvInstructions"
+                android:layout_width="321dp"
+                android:layout_height="224dp"
+                android:layout_marginStart="30dp"
+                android:lineSpacingExtra="22dp"
+                android:text=""
+                android:textColor="#4B1D1D"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:layout_marginStart="480dp"
+            android:layout_marginTop="840dp"
+            android:contentDescription=""
+            android:elevation="10dp"
+            android:src="@drawable/ic_delete" />
+
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="46dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="157dp"
+            android:clickable="true"
+            android:contentDescription="@string/back_cd"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:src="@drawable/ic_back_arrow"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </FrameLayout>
+
+</RelativeLayout>

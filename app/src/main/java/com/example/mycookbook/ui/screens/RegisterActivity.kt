@@ -1,5 +1,6 @@
 package com.example.mycookbook.ui.screens
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.widget.*
 import androidx.activity.ComponentActivity
@@ -22,12 +23,17 @@ class RegisterActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val screenLayout = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+        if (screenLayout >= Configuration.SCREENLAYOUT_SIZE_LARGE) {
+            setContentView(R.layout.activity_register)
+        } else {
+            setContentView(R.layout.activity_register)
+        }
+
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         firebaseAnalytics.logEvent("register_screen_opened", null)
 
         firestore = FirebaseFirestore.getInstance()
-
-        setContentView(R.layout.activity_register)
 
         db = AppDatabase.getInstance(applicationContext)
 

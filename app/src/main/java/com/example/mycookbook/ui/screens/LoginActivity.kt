@@ -1,6 +1,7 @@
 package com.example.mycookbook.ui.screens
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
@@ -35,6 +36,13 @@ class LoginActivity : ComponentActivity() {
     private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val screenLayout = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+        if (screenLayout >= Configuration.SCREENLAYOUT_SIZE_LARGE) {
+            setContentView(R.layout.activity_login)
+        } else {
+            setContentView(R.layout.activity_login)
+        }
         com.google.firebase.FirebaseApp.initializeApp(this)
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
         super.onCreate(savedInstanceState)
@@ -43,7 +51,6 @@ class LoginActivity : ComponentActivity() {
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         FacebookSdk.sdkInitialize(applicationContext)
         AppEventsLogger.activateApp(application)
-        setContentView(R.layout.activity_login)
         db = AppDatabase.getInstance(applicationContext)
         sessionManager = SessionManager(this)
         val guestId = sessionManager.getGuestId()

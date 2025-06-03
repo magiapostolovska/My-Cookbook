@@ -39,6 +39,7 @@ class CategoryActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
         categoryId = intent.getIntExtra("category_id", -1)

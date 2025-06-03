@@ -1,6 +1,7 @@
 package com.example.mycookbook.ui.screens
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -43,7 +44,13 @@ class UserProfileActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user_profile)
+
+        val screenLayout = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+        if (screenLayout >= Configuration.SCREENLAYOUT_SIZE_LARGE) {
+            setContentView(R.layout.activity_user_profile)
+        } else {
+            setContentView(R.layout.activity_user_profile)
+        }
 
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         firebaseAnalytics.logEvent("user_profile_screen_opened", null)
@@ -286,4 +293,3 @@ class UserProfileActivity : ComponentActivity() {
         userListener?.remove()
     }
 }
-

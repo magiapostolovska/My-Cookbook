@@ -1,6 +1,7 @@
 package com.example.mycookbook.ui.screens
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
@@ -36,7 +37,12 @@ class AddRecipeActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_recipe)
+        val screenLayout = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+        if (screenLayout >= Configuration.SCREENLAYOUT_SIZE_LARGE) {
+            setContentView(R.layout.activity_add_recipe)
+        } else {
+            setContentView(R.layout.activity_add_recipe)
+        }
 
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         firebaseAnalytics.logEvent("open_add_recipe_screen", null)
